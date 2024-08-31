@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog sobre Tecnologias e Stacks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <h1>Blog Geisila Costa</h1>
+      <h2>Aprenda sobre tecnologia</h2>
+      <nav aria-label="Navegação Principal">
+          <ul>
+            <li><a href="index.html" target="_blank">HOME</a></li>
+              <li><a href="#react">React</a></li>
+              <li><a href="#node.js">Node.js</a></li>
+              <li><a href="#typescript">TypeScript</a></li>
+              <li><a href="#java">Java</a></li>
+              <li><a href="#javascript">JavaScript</a></li>
+              <li><a href="#reactnative">React Native</a></li>
+          </ul>
+      </nav>
+  </header>
+    <!-- Seção do Blog -->
+    <section id="blog">
+        <h2>Blog sobre Tecnologias e Stacks</h2>
+        <div class="blog-container">
+            <!-- Blog Post 1 -->
+            <article class="blog-post" id="react">
+                <h3>Introdução ao React</h3>
+                <p>React é uma biblioteca JavaScript para construir interfaces de usuário...</p>
+                <a href="#" class="read-more" 
+                data-title="Introdução ao React" 
+                data-content="
+
+O que é React?
+React é uma biblioteca JavaScript de código aberto para criar interfaces de usuário, desenvolvida pelo Facebook. É amplamente usada para construir aplicações web interativas e dinâmicas, facilitando o desenvolvimento de componentes reutilizáveis.
+
+Principais Conceitos
+Componentes: A base de uma aplicação React. Componentes são unidades independentes e reutilizáveis de código que retornam elementos da interface do usuário. Podem ser classificados como:
+
+Componentes Funcionais: Usam funções JavaScript e são geralmente mais simples e fáceis de entender.
+Componentes de Classe: Usam classes JavaScript e permitem o uso de métodos de ciclo de vida e estado local.
+JSX (JavaScript XML): Uma extensão de sintaxe que permite escrever HTML dentro do JavaScript. JSX é convertido em chamadas React.createElement que descrevem a estrutura da interface.
+
+Props (Propriedades): São os dados passados para um componente a partir de seu pai. Props são imutáveis e permitem a personalização e reutilização de componentes.
+
+State (Estado): O estado é um objeto que representa dados que podem mudar ao longo do tempo. Cada componente pode ter seu próprio estado e atualizá-lo usando setState (para componentes de classe) ou useState (para componentes funcionais com hooks).
+
+Hooks: Funções que permitem o uso de estado e outros recursos do React em componentes funcionais. Alguns hooks comuns são:
+
+useState: Para gerenciar o estado em componentes funcionais.
+useEffect: Para executar efeitos colaterais, como chamadas de API.
+useContext: Para acessar dados do contexto.
+Context API: Permite compartilhar dados entre componentes sem precisar passar props manualmente através de cada nível da árvore de componentes.
+
+Ciclo de Vida dos Componentes: Para componentes de classe, há métodos específicos para lidar com o ciclo de vida, como componentDidMount, componentDidUpdate e componentWillUnmount. Para componentes funcionais, o hook useEffect pode ser usado para lidar com efeitos colaterais semelhantes.
+
+Virtual DOM: React usa um Virtual DOM para otimizar o processo de atualização da interface do usuário. Em vez de atualizar o DOM real diretamente, o React cria uma representação virtual e compara com a versão anterior para aplicar apenas as mudanças necessárias.
+
+Routing: O React Router é uma biblioteca padrão para gerenciar navegação e roteamento dentro de aplicações React, permitindo criar aplicações de página única (SPA) com navegação entre diferentes visualizações.
+
+State Management: Para gerenciamento de estado global, bibliotecas como Redux e MobX são frequentemente usadas em aplicações React mais complexas. Elas permitem o gerenciamento centralizado de estados e ações.
+
+Vantagens do React
+Reutilização de Componentes: Permite criar componentes independentes que podem ser reutilizados em diferentes partes da aplicação.
+Desempenho: A atualização eficiente do Virtual DOM melhora o desempenho e a velocidade de renderização.
+Comunidade e Ecossistema: Possui uma vasta comunidade e um ecossistema rico de ferramentas, bibliotecas e extensões.
+Facilidade de Aprendizado: A abordagem declarativa e a simplicidade dos componentes tornam a curva de aprendizado mais suave em comparação com outras tecnologias.
+Ferramentas e Ecosistema
+Create React App: Um ambiente de desenvolvimento pronto para uso, que configura rapidamente um novo projeto React com uma configuração padrão.
+Next.js: Um framework para React que fornece funcionalidades adicionais, como renderização do lado do servidor (SSR) e geração de sites estáticos (SSG).
+Gatsby: Um gerador de sites estáticos que usa React e GraphQL para criar sites rápidos e otimizados.
+Conclusão
+React é uma biblioteca poderosa e flexível que facilita a construção de interfaces de usuário interativas e escaláveis. Com sua abordagem baseada em componentes, gerenciamento eficiente de estado e vasta comunidade, é uma escolha popular para desenvolvedores de aplicações web modernas.">Leia mais</a>
+<img src="img/ToodoApp.png" alt="projeto em React" class="img-responsive"">
+<p>Um componente React simples que renderiza uma lista de tarefas e permite adicionar novas tarefas:<br> Conceitos Demonstrados:<br>
+
+  * Uso de Hooks (useState) para gerenciar o estado do componente.<br>
+  * Renderização de listas e controle de formulário.<br>
+  * Manipulação de eventos de entrada.</p>
+         </article>
+      
+            <!-- Blog Post 2 -->
+            <article class="blog-post" id="node.js">
+                <h3>Node.js para Iniciantes</h3>
+                <p>Node.js é um runtime JavaScript construído com o motor de JavaScript V8 do Chrome...</p>
+                <a href="#" class="read-more"  data-title="Introdução ao Node.js" 
+                data-content="O que é Node.js?
+                Node.js é um ambiente de execução JavaScript de código aberto, construído sobre o motor JavaScript V8 do Google Chrome. Ele permite que os desenvolvedores executem código JavaScript no lado do servidor, fora do navegador, tornando possível o desenvolvimento de aplicações web completas usando JavaScript tanto no front-end quanto no back-end.
+                
+                Principais Conceitos
+                Event-Driven e Non-Blocking I/O: Node.js é baseado em um modelo de execução orientado a eventos e I/O não bloqueante. Isso significa que o Node.js pode processar várias operações ao mesmo tempo sem bloquear a execução do programa, tornando-o extremamente eficiente para aplicações que exigem alto desempenho e manipulação de múltiplas requisições simultâneas.
+                
+                Single-Threaded: Embora seja single-threaded, Node.js pode lidar com um grande número de conexões simultâneas devido à sua arquitetura orientada a eventos. Ele usa um modelo de loop de eventos para gerenciar múltiplas conexões e operações assíncronas.
+                
+                Asynchronous Programming: Node.js utiliza fortemente programação assíncrona, o que significa que operações que levam tempo para serem concluídas, como chamadas de API ou operações de leitura/escrita de arquivos, são realizadas em segundo plano, permitindo que o fluxo principal do programa continue a execução sem esperar.
+                
+                NPM (Node Package Manager): NPM é o gerenciador de pacotes padrão para Node.js. Ele permite que desenvolvedores instalem, compartilhem e gerenciem pacotes de software JavaScript. Com mais de um milhão de pacotes, NPM tem um vasto ecossistema que facilita a adição de funcionalidades em aplicações Node.js.
+                
+                Módulos: Node.js usa um sistema de módulos, onde cada arquivo é tratado como um módulo separado. Existem módulos internos como http, fs (file system), path, entre outros, e também é possível criar módulos personalizados. Os módulos podem ser exportados e importados para serem reutilizados em diferentes partes de uma aplicação.
+                
+                Streams: Streams são uma maneira eficiente de ler ou escrever dados sequencialmente em Node.js. Eles permitem processar dados em pedaços menores, o que é útil para manipular arquivos grandes, transferências de dados pela rede e outras operações que exigem grandes volumes de dados.
+                
+                Buffer: O módulo Buffer é usado para manipular dados binários de forma eficiente em Node.js, especialmente para manipulação de arquivos e dados de rede. Buffers são necessários porque o JavaScript não tem um tipo de dados nativo para lidar diretamente com streams de dados binários.
+                
+                Eventos: Node.js tem um módulo interno chamado events que permite o uso de programação orientada a eventos. É possível criar e manipular eventos personalizados usando a classe EventEmitter.
+                
+                Vantagens do Node.js
+                Alta Performance: Devido ao seu modelo orientado a eventos e ao motor V8 do Google Chrome, Node.js pode processar um grande número de requisições simultâneas com baixa latência e alta escalabilidade.
+                
+                Desenvolvimento Full-Stack com JavaScript: Com Node.js, os desenvolvedores podem usar JavaScript para desenvolver tanto o front-end quanto o back-end de uma aplicação web, promovendo um ambiente de desenvolvimento unificado e simplificado.
+                
+                Escalabilidade: Node.js é adequado para criar aplicações escaláveis, especialmente aquelas que precisam lidar com um grande número de conexões simultâneas, como APIs RESTful, chat em tempo real, sistemas de streaming, entre outros.
+                
+                Vasta Comunidade e Ecossistema: Node.js tem uma comunidade ativa que contribui com uma vasta gama de pacotes e módulos no NPM, facilitando o desenvolvimento de novas funcionalidades e a integração com outras tecnologias.
+                
+                Fácil Integração com Outros Serviços: Node.js é frequentemente usado para construir microserviços, o que facilita a integração com outras tecnologias e serviços.
+                
+                Casos de Uso
+                Node.js é ideal para uma variedade de aplicações, incluindo:
+                
+                APIs RESTful: Criação de APIs leves e de alto desempenho.
+                Aplicações em Tempo Real: Como chats e jogos multiplayer.
+                Aplicações de Streaming de Dados: Streaming de áudio ou vídeo.
+                Servidores Proxy: Implementação de servidores proxy para manipulação de múltiplas requisições simultâneas.
+                Aplicações IoT: Node.js é uma escolha popular para desenvolver servidores de backend que se comunicam com dispositivos IoT.
+                Ferramentas e Frameworks Populares
+                Express.js: Um framework minimalista e flexível para construir aplicações web e APIs em Node.js. Ele fornece um conjunto robusto de recursos para criar rapidamente servidores e rotas HTTP.
+                
+                NestJS: Um framework Node.js progressivo que usa TypeScript e é inspirado em conceitos do Angular. É ideal para a criação de APIs escaláveis e aplicativos back-end robustos.
+                
+                Koa.js: Criado pelos mesmos desenvolvedores do Express.js, o Koa é um framework mais moderno e leve que aproveita totalmente o uso de funções assíncronas do JavaScript.
+                
+                Socket.IO: Uma biblioteca para criar aplicações de tempo real como chats e jogos multiplayer, fornecendo comunicação bidirecional em tempo real entre clientes e servidores.
+                
+                Meteor.js: Um framework completo para construir aplicações web e móveis em tempo real, que usa JavaScript no lado do cliente e do servidor.
+                
+                PM2: Um gerenciador de processos avançado para aplicações Node.js, que facilita a monitoração, otimização e escalabilidade de aplicações em produção.
+                
+                Conclusão
+                Node.js revolucionou o desenvolvimento de back-end ao permitir que os desenvolvedores usem JavaScript no servidor. Sua arquitetura orientada a eventos e modelo não-bloqueante tornam-no extremamente eficiente para aplicações escaláveis e de alta performance. Com seu vasto ecossistema, comunidade ativa e ampla gama de casos de uso, Node.js continua a ser uma escolha popular para o desenvolvimento de aplicações modernas.
+                 "
+>Leia mais</a>
+<img src="img/servidor_node.js.png" alt="projeto em Node.js" class="img-responsive">
+<p>Um servidor HTTP simples em Node.js que responde com "Hello, World!" para todas as requisições:<br> Conceitos Demonstrados:<br>
+
+  * Criação de um servidor HTTP básico.<br>
+  * Manipulação de requisições e respostas.<br>
+  * Manipulação de eventos de entrada.</p>
+            </article>
+      
+            <article class="blog-post" id="typescript">
+                <h3>Por que escolher TypeScript?</h3>
+                <p>TypeScript é uma linguagem de programação fortemente tipada que se baseia em JavaScript...</p>
+                <a href="#" class="read-more" data-title="Introdução ao TypeScript" 
+                data-content=" O que é TypeScript?
+TypeScript é um superconjunto sintático de JavaScript que adiciona tipagem estática e outros recursos avançados ao JavaScript. Desenvolvido pela Microsoft, o TypeScript compila para JavaScript puro, o que significa que pode ser executado em qualquer ambiente que suporte JavaScript. O principal objetivo do TypeScript é tornar o desenvolvimento JavaScript mais robusto e menos propenso a erros, especialmente em aplicações grandes e complexas.
+
+Principais Conceitos
+Tipagem Estática: Diferente do JavaScript, que é uma linguagem de tipagem dinâmica, o TypeScript permite definir tipos explícitos para variáveis, parâmetros de funções, retornos de funções e propriedades de objetos. Isso ajuda a evitar muitos tipos de erros comuns durante o desenvolvimento.
+
+Compilação para JavaScript: O TypeScript é compilado em JavaScript. O compilador (tsc) verifica o código TypeScript para erros de tipo e converte o código em JavaScript. Esta saída pode então ser executada em qualquer ambiente JavaScript, como navegadores ou Node.js.
+
+Integração com Editor de Código: TypeScript oferece integração avançada com editores de código como Visual Studio Code, proporcionando autocompletar, refatoração de código e verificação de tipos em tempo real. Isso melhora significativamente a produtividade do desenvolvedor.
+
+Interfaces e Tipos: TypeScript permite a definição de interfaces e tipos personalizados, o que ajuda a garantir que os objetos tenham a forma esperada. Interfaces e tipos são contratos de código que garantem que um determinado conjunto de propriedades e métodos seja implementado.
+
+Classes e Herança: TypeScript melhora o suporte para programação orientada a objetos (OOP) com sintaxe de classe, herança, encapsulamento e modificadores de acesso como public, private e protected.
+
+Módulos e Namespaces: TypeScript permite organizar o código em módulos e namespaces, facilitando a reutilização e manutenção. Módulos em TypeScript correspondem diretamente ao padrão de módulos do ES6, com suporte para import e export.
+
+Generics: TypeScript suporta tipos genéricos, que permitem a criação de componentes reutilizáveis que funcionam com qualquer tipo de dados, aumentando a flexibilidade e segurança do código.
+
+Tipos Union e Intersection: Tipos Union (|) permitem que uma variável seja de múltiplos tipos, enquanto tipos Intersection (&) combinam múltiplos tipos em um só. Esses recursos tornam o sistema de tipos do TypeScript extremamente poderoso e expressivo.
+
+Anotação de Tipos: Permite que os desenvolvedores especifiquem explicitamente o tipo de uma variável, parâmetro de função ou retorno, o que ajuda o compilador a identificar possíveis erros e permite a verificação de tipos.
+
+Sistema de Tipos Avançado: TypeScript possui um sistema de tipos sofisticado que inclui tipos opcionais, tipos literais, enumerações, interfaces, tipos de união, interseção, genéricos e condicionais.
+
+Vantagens do TypeScript
+Maior Robustez e Manutenibilidade: A tipagem estática ajuda a detectar erros comuns de desenvolvimento cedo, antes da execução, resultando em código mais robusto e de fácil manutenção.
+
+Melhor Experiência de Desenvolvimento: Ferramentas como autocompletar, verificação de tipos em tempo real, refatoração e documentação integrada melhoram a experiência do desenvolvedor, tornando-o mais produtivo.
+
+Suporte a Novos Recursos de JavaScript: TypeScript suporta recursos modernos de JavaScript (ES6 e superior), incluindo async/await, classes, módulos e muito mais. Ele também permite que desenvolvedores usem esses recursos mais cedo, compilando para versões mais antigas do JavaScript, se necessário.
+
+Refatoração Segura: O TypeScript facilita a refatoração de código em projetos grandes, pois o sistema de tipos fornece garantia de que as mudanças não introduzirão erros inesperados.
+
+Adaptação e Escalabilidade: É especialmente útil para projetos grandes e em crescimento, onde a complexidade do código pode levar a mais erros. A tipagem explícita torna o código mais claro e previsível.
+
+Comunidade e Ecossistema: TypeScript é amplamente adotado, com uma comunidade crescente e suporte de bibliotecas e frameworks como React, Angular e Vue.js. Muitos desses frameworks foram atualizados para fornecer tipagens nativas ou tipos oficialmente suportados.
+
+Casos de Uso
+Aplicações Web Complexas: Aplicações que requerem uma grande quantidade de lógica de negócios, manipulação de estados complexos ou dependem de APIs externas.
+Desenvolvimento de Bibliotecas e Frameworks: TypeScript é ideal para o desenvolvimento de bibliotecas e frameworks devido à sua tipagem estática, que ajuda os usuários a entender melhor a API.
+Projetos em Grande Escala: Empresas e equipes que mantêm grandes bases de código se beneficiam da segurança de tipos e da capacidade de refatoração que o TypeScript oferece.
+Desenvolvimento de Backend com Node.js: O TypeScript é amplamente usado para desenvolver aplicações de backend com Node.js, fornecendo um ambiente de desenvolvimento mais seguro e com menos erros.
+Ferramentas e Frameworks Populares que Usam TypeScript
+Angular: Um framework popular para construção de aplicações web single-page que usa TypeScript como linguagem principal.
+
+React: Embora o React seja escrito em JavaScript, ele tem suporte completo para TypeScript, e muitos desenvolvedores preferem usar TypeScript para construir componentes React mais robustos.
+
+Vue.js: Vue oferece suporte a TypeScript, especialmente a partir do Vue 3, que foi projetado com melhor suporte para tipagem estática e integrações TypeScript.
+
+NestJS: Um framework de back-end que usa TypeScript e é inspirado nos conceitos do Angular, ideal para construir APIs RESTful robustas e escaláveis.
+
+Deno: Um ambiente de execução JavaScript/TypeScript seguro e moderno criado pelo criador do Node.js, Ryan Dahl.
+
+Conclusão
+TypeScript melhora a experiência de desenvolvimento e a qualidade do código ao adicionar tipagem estática ao JavaScript. Com sua robustez, suporte a novos recursos e um ecossistema crescente, TypeScript se tornou a escolha padrão para muitos desenvolvedores ao criar aplicações modernas e escaláveis. Ao adotar TypeScript, as equipes de desenvolvimento podem reduzir erros de runtime, melhorar a manutenção do código e aumentar a produtividade geral. ">Leia mais</a>
+<img src="img/funcao_soma_typescript.png" alt="projeto em RTypeScript" class="img-responsive">
+<p>Um exemplo de função TypeScript que calcula a soma de dois números e usa tipagem explícita:<br> Conceitos Demonstrados:<br>
+
+  * Definição de tipos para parâmetros e retorno de função.<br>
+  * Uso da tipagem estática para evitar erros em tempo de desenvolvimento.<br>
+            </article>
+      
+            <article class="blog-post" id="java">
+              <h3>Api Restfull com Java</h3>
+              <p>APIs RESTful usando Java, destacando conceitos essenciais, arquitetura, ferramentas, e um breve exemplo de como implementar uma API RESTful com o framework Spring Boot</p>
+              <a href="#" class="read-more" data-title="Introdução a Api Restfull" 
+              data-content=". O que é uma API RESTful?
+              Uma API (Application Programming Interface) RESTful é uma interface que segue os princípios do REST (Representational State Transfer), um estilo arquitetural para sistemas distribuídos. APIs RESTful são amplamente utilizadas para permitir a comunicação entre diferentes sistemas através de protocolos HTTP, usando métodos como GET, POST, PUT, e DELETE.
+              2. Princípios da Arquitetura REST
+              As APIs RESTful devem seguir alguns princípios fundamentais:
+              Cliente-Servidor: Separação entre o cliente (frontend) e o servidor (backend), promovendo a escalabilidade.
+              Stateless: Cada requisição do cliente para o servidor deve conter todas as informações necessárias para entender e processar o pedido; o servidor não mantém o estado do cliente entre as requisições.
+              Cacheável: As respostas das APIs devem informar se são ou não cacheáveis para melhorar a eficiência e desempenho.
+              Interface Uniforme: Uso de convenções comuns para recursos, identificadores e operações HTTP.
+              Sistema em Camadas: Arquitetura que permite a separação em camadas para melhorar a escalabilidade e modularidade do sistema.
+              3. Ferramentas e Frameworks em Java
+              Para desenvolver APIs RESTful em Java, algumas das ferramentas e frameworks mais utilizados incluem:
+              Spring Boot: Um framework baseado em Spring que facilita o desenvolvimento de aplicações Java, incluindo APIs RESTful.
+              JAX-RS: Uma API Java para serviços web RESTful, com implementações como Jersey e RESTEasy.
+              Hibernate: Um framework ORM (Object-Relational Mapping) para persistência de dados.
+              4. Como o Spring Boot Facilita o Desenvolvimento de APIs RESTful
+              Spring Boot é um framework que simplifica o desenvolvimento de aplicações Java, permitindo a criação rápida de APIs RESTful através de configurações mínimas. Ele fornece diversos recursos integrados, como:
+              
+              Controle de Dependências: Usa o Maven ou Gradle para gerenciar dependências facilmente.
+              Anotações Simples: Anotações como @RestController, @RequestMapping, @GetMapping, @PostMapping simplificam a definição de endpoints REST.
+              Spring Data JPA: Facilita a integração com bancos de dados usando JPA (Java Persistence API).
+              In-memory Databases: Suporte a bancos de dados em memória como H2 para testes rápidos.
+              5. Estrutura Básica de um Projeto Spring Boot para API RESTful
+              Um projeto típico de API RESTful com Spring Boot segue esta estrutura:
+              Model: Representa as entidades do banco de dados.
+              Repository: Interface para acesso ao banco de dados.
+              Service: Contém a lógica de negócios.
+              Controller: Expõe os endpoints da API
+6. Benefícios de Usar Java e Spring Boot para APIs RESTful
+Desenvolvimento Rápido: A configuração mínima e o suporte a diversas tecnologias tornam o desenvolvimento mais rápido.
+Escalabilidade e Desempenho: Java é altamente performático e adequado para sistemas escaláveis.
+Grande Comunidade e Suporte: Ferramentas amplamente utilizadas e documentadas com uma vasta comunidade.
+Flexibilidade e Customização: Permite a construção de sistemas complexos com alta flexibilidade.
+
+">Leia mais</a>
+<p><br> Exemplo de Projeto: <br>Vamos criar um exemplo de uma API RESTful usando Java com o framework Spring Boot, que é uma das escolhas mais populares para construir APIs em Java devido à sua simplicidade e rapidez de desenvolvimento.<br> Configurando o Projeto Spring Boot
+  Você pode criar um projeto Spring Boot usando o Spring Initializr (https://start.spring.io/),<br> configurando as seguintes dependências:<br>
+  Spring Web (para suporte ao desenvolvimento web e RESTful).<br>
+  Spring Data JPA (para integração com banco de dados).<br>
+  H2 Database (um banco de dados em memória para fins de demonstração).</p>
+<div class="image-gallery">
+  <figure>
+    <img src="img/api1.png" alt="Imagem 1">
+    <figcaption>Descrição da imagem 1: Estrutura basica do projeto.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/api2.png" alt="Imagem 2">
+    <figcaption>Descrição da imagem 2: Vamos criar uma entidade simples chamada User que representará os dados de um usuário no banco de dados.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/api3.png" alt="Imagem 3">
+    <figcaption>Descrição da imagem 3: Vamos criar um repositório que permitirá operações CRUD na entidade User.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/api4.png" alt="Imagem 4">
+    <figcaption>Descrição da imagem 4: Agora, vamos criar o controlador REST (UserController) que terá os endpoints para as operações CRUD.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/api5.png" alt="Imagem 5">
+    <figcaption>Descrição da imagem 5: Adicione a configuração do banco de dados H2 ao arquivo application.properties para persistência de dados em memória:</figcaption>
+  </figure>
+  <figure>
+    <img src="img/api6.png" alt="Imagem 6">
+    <figcaption>Descrição da imagem 6: Execute o método main da classe DemoApplication para iniciar o servidor. A aplicação será iniciada na porta padrão 8080.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/api7.png" alt="Imagem 7">
+    <figcaption>Descrição da imagem 7: Agora você pode testar a API usando ferramentas como Postman ou cURL.<br>
+
+      Obter todos os usuários: GET http://localhost:8080/api/users<br>
+      Obter um usuário pelo ID: GET http://localhost:8080/api/users/{id}<br>
+      Criar um novo usuário: POST http://localhost:8080/api/users com um corpo JSON como na foto:</figcaption>
+  </figure>
+  
+</div>
+<p>Este exemplo cobre a criação de uma API RESTful básica usando Java com Spring Boot, demonstrando como configurar uma aplicação para realizar operações CRUD com persistência de dados em um banco de dados em memória. Essa estrutura pode ser expandida e personalizada para atender a casos de uso mais complexos em desenvolvimento de software empresarial.</p>
+          </article>
+
+          <article class="blog-post" id="javascript">
+            <h3>Linguagem de Programaçãp JavaScript</h3>
+            <p>JavaScript é uma linguagem de programação de alto nível, interpretada e dinâmica, que é amplamente utilizada para criar e controlar conteúdo dinâmico em websites. Ela foi originalmente desenvolvida pela Netscape em 1995 para adicionar comportamento dinâmico às páginas da web e evoluiu ao longo dos anos para se tornar uma das linguagens de programação mais populares do mundo, suportada por todos os navegadores modernos.</p>
+            <a href="#" class="read-more" data-title="Introdução ao JavaScript" 
+            data-content=" Características do JavaScript
+            Linguagem Interpretada: JavaScript é interpretado pelos navegadores em tempo de execução, o que significa que o código é executado diretamente, sem necessidade de compilação prévia.
+            Dinâmica e Tipagem Fraca: JavaScript é uma linguagem de tipagem dinâmica, o que significa que as variáveis não têm um tipo associado explicitamente. Você pode atribuir qualquer tipo de dado a uma variável.
+            Orientada a Objetos e Funcional: JavaScript suporta estilos de programação orientados a objetos e funcionais, permitindo flexibilidade para os desenvolvedores.
+            Event-driven e Assíncrona: JavaScript é frequentemente usado para programação orientada a eventos e pode realizar operações assíncronas, como chamadas de rede, usando callbacks, promises, ou async/await.
+            Baseada em Protótipos: Ao contrário de muitas linguagens orientadas a objetos que utilizam classes, JavaScript usa protótipos para herança de objetos.
+            
+            Uso e Aplicações do JavaScript
+            JavaScript é uma linguagem de propósito geral usada em diversos contextos, incluindo:
+            
+            Desenvolvimento Web: Principalmente utilizado para adicionar comportamento dinâmico e interatividade a páginas web, como animações, formulários dinâmicos, e atualizações de conteúdo em tempo real.
+            Back-end com Node.js: Além de sua utilização no front-end, JavaScript também é amplamente utilizado no lado do servidor com Node.js, permitindo a criação de aplicações completas (full-stack) com uma única linguagem.
+            Aplicações Móveis e Desktop: JavaScript pode ser usado para desenvolver aplicações móveis e desktop com tecnologias como React Native e Electron.
+            Machine Learning e Data Science: Bibliotecas como TensorFlow.js trazem machine learning para o navegador e para o Node.js.
+            IoT (Internet of Things): JavaScript é utilizado em dispositivos IoT para controlar hardware e sensores.
+            
+            
+            Fundamentos do JavaScript
+            
+            
+            Sintaxe Básica
+            A sintaxe básica do JavaScript é bastante semelhante a outras linguagens de programação, com suporte a variáveis, operadores, estruturas de controle, funções, e objetos.
+            
+            javascript
+            
+               **Declaração de variáveis**
+            let nome = 'John'; // variável que pode mudar
+            const PI = 3.14; // constante, não pode mudar
+            
+               **Função**
+            function saudacao(nome) {
+                return `Olá, ${nome}!`;
+            }
+            console.log(saudacao(nome)); // Saída: Olá, John!
+            
+                **Estruturas de Controle **
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+            
+                **Funções Arrow**
+            const soma = (a, b) => a + b;
+            console.log(soma(5, 3)); // Saída: 8
+           
+           
+            Tipos de Dados
+            JavaScript é uma linguagem de tipagem dinâmica, o que significa que as variáveis não são tipadas explicitamente. Você pode atribuir qualquer tipo de dado a uma variável.
+            
+            JavaScript possui vários tipos de dados:
+            
+            Primitivos: string, number, boolean, null, undefined, symbol, bigint.
+      
+            Objetos: Um objeto é uma coleção de chave-valor. Arrays, funções, e objetos literais são tipos de objetos.
+            
+           **Tipos Primitivos **
+            let nome = 'Alice'; // String
+            let idade = 30; // Number
+            let isDeveloper = true; // Boolean
+            let vazio = null; // Null
+            let indefinido; // Undefined
+            
+             ** Objetos **
+            let pessoa = {
+                nome: 'Alice',
+                idade: 30,
+                profissao: 'Desenvolvedora'
+            };
+            // Acesso a Propriedades do Objeto
+            console.log(pessoa.nome); // Saída: Alice
+            console.log(pessoa['idade']); // Saída: 30
+            
+             **Arrays **
+            let numeros = [1, 2, 3, 4, 5];
+            console.log(numeros[2]); // Saída: 3
+            
+             Funções e Escopo
+      
+            Funções são blocos de código reutilizáveis que podem ser chamados em qualquer lugar do programa. JavaScript suporta funções anônimas, funções de primeira classe, e funções de ordem superior.
+            
+            Escopo Global: Variáveis declaradas fora de qualquer função têm escopo global.
+            Escopo Local (Função): Variáveis declaradas dentro de uma função têm escopo local e não podem ser acessadas fora da função.
+            
+             **Função Tradicional **
+            function multiplicar(a, b) {
+                return a * b;
+            }
+            
+            ** Função Anônima **
+            const dividir = function(a, b) {
+                return a / b;
+            };
+            
+              **Função Arrow **
+            const subtrair = (a, b) => a - b;
+            console.log(multiplicar(2, 3)); // Saída: 6
+            console.log(dividir(10, 2)); // Saída: 5
+            console.log(subtrair(7, 4)); // Saída: 3
+            
+            
+            Manipulação de DOM
+      
+            JavaScript é frequentemente utilizado para manipular o DOM (Document Object Model) do navegador para alterar o conteúdo, estrutura e estilo de uma página web.
+            
+           
+             **Selecionar Elemento **
+            const titulo = document.querySelector('h1');
+            
+             **Alterar Conteúdo **
+            titulo.textContent = 'Novo Título';
+            
+             **Adicionar Evento **
+            titulo.addEventListener('click', () => {
+                alert('Título clicado!');
+            });
+            
+             Programação Assíncrona em JavaScript
+      
+            JavaScript é conhecido por sua capacidade de lidar com operações assíncronas, como requisições de rede, temporizadores e manipulação de eventos.
+            
+            *Callbacks: Funções passadas como argumentos para outras funções que são chamadas quando a operação assíncrona é concluída.
+            
+            setTimeout(() => {
+                console.log('Executado após 2 segundos');
+            }, 2000);
+      
+            *Promises: Um objeto que representa uma eventual conclusão ou falha de uma operação assíncrona.
+            
+            const promessa = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Promessa resolvida!');
+                }, 2000);
+            });
+            
+            promessa.then(res => console.log(res)).catch(err => console.error(err));
+            
+            *Async/Await: Sintaxe para lidar com Promises de maneira mais síncrona e legível.
+           
+            async function fetchData() {
+                try {
+                    let response = await fetch('https://api.example.com/data');
+                    let data = await response.json();
+                    console.log(data);
+                } catch (error) {
+                    console.error('Erro ao buscar dados:', error);
+                }
+            }
+            fetchData();
+           
+            JavaScript Moderno (ES6+ e além)
+            Com o lançamento do ECMAScript 6 (ES6) em 2015, JavaScript recebeu várias melhorias e novos recursos, como:
+            
+           * Arrow Functions: Sintaxe curta para funções anônimas.
+            Template Literals: Strings multilinhas e interpolação de expressões usando crases (`).
+      
+           * Destructuring: Extração de dados de arrays ou objetos em variáveis distintas.
+            
+           *Modules: Suporte nativo para módulos JS, permitindo importações e exportações.
+            
+           *Classes: Sintaxe para definição de classes, facilitando a programação orientada a objetos.
+            
+           *Spread Operator (...): Permite espalhar elementos de um array ou objeto.
+            
+            // Arrow Functions
+            const saudacao = nome => `Olá, ${nome}!`;
+            
+            // Template Literals
+            const mensagem = `O usuário ${nome} tem ${idade} anos.`;
+            
+            // Destructuring
+            const { nome, idade } = pessoa;
+            
+            // Spread Operator
+            const novaPessoa = { ...pessoa, email: 'alice@example.com' };
+            
+            Ferramentas e Frameworks Populares em JavaScript
+            
+            *React: Biblioteca para construção de interfaces de usuário.
+      
+            *Angular: Framework completo para desenvolvimento de aplicações web.
+      
+            *Vue.js: Framework progressivo para construção de interfaces de usuário.
+      
+            *Node.js: Ambiente de execução para JavaScript no lado do servidor.
+            
+            *Express.js: Framework minimalista para criação de APIs e aplicativos web com Node.js.
+            
+            *Deno: Ambiente de execução moderno e seguro para JavaScript e TypeScript, criado pelo autor original do Node.js.
+            
+              **Conclusão **
+                    JavaScript é uma linguagem poderosa e versátil, adequada para uma ampla gama de aplicações, desde desenvolvimento web até server-side e aplicações móveis. Com sua sintaxe flexível, suporte a múltiplos paradigmas de programação, e um vasto ecossistema de bibliotecas e frameworks, JavaScript continua a ser uma das escolhas mais populares para desenvolvedores em todo o mundo.
+      
+      ">Leia mais</a>
+      <p><br>Vamos criar um exemplo de projeto em JavaScript: um aplicativo simples de To-Do List. Este aplicativo permitirá que o usuário adicione, remova e marque tarefas como concluídas. Usaremos HTML, CSS, e JavaScript puro para criar este projeto.<br>Estrutura do Projeto<br>
+      <br>  O projeto será composto pelos seguintes arquivos:<br>
+        
+        index.html: O arquivo HTML que contém a estrutura da página.<br>
+        styles.css: O arquivo CSS que contém os estilos para a página.<br>
+        script.js: O arquivo JavaScript que contém a lógica para o aplicativo de To-Do List.</p>
+      <div class="image-gallery">
+      <figure>
+      <img src="img/1html-js.png" alt="Imagem 1">
+      <figcaption>descrição da imagem 1:<br> index.html
+        Este arquivo HTML cria a estrutura básica da página web e inclui os links para o arquivo CSS e o arquivo JavaScript.</figcaption>
+      </figure>
+      <figure>
+      <img src="img/2css-js.png" alt="Imagem 2">
+      <figcaption>Descrição da imagem 2:<br> styles.css:
+        Este arquivo CSS define o estilo para o aplicativo de To-Do List, incluindo o layout, cores, e estilização dos elementos.</figcaption>
+      </figure>
+      <figure>
+      <img src="img/3js.png" alt="Imagem 3">
+      <figcaption>Descrição da imagem 3:<br>  script.js
+        Este arquivo JavaScript contém a lógica principal para o funcionamento da To-Do List. Ele inclui funcionalidades para adicionar, remover, e marcar tarefas como concluídas.</figcaption>
+      </figure>
+      
+      </div>
+      <p>Explicação do Código <br>
+        HTML (index.html):<br>
+        <br>
+        Contém um campo de entrada de texto para adicionar novas tarefas e um botão para adicionar a tarefa à lista.<br>
+        A lista de tarefas é exibida usando um elemento não ordenado.
+        CSS (styles.css):<br>
+        <br>
+        Estilos básicos são aplicados ao corpo, container principal, input, botão e lista de tarefas.<br>
+        Usamos seletores para estilizar tarefas concluídas (marcadas como completas) com um estilo diferente.<br>
+        JavaScript (script.js):<br>
+        <br>
+        Ao carregar a página (DOMContentLoaded), configuramos os manipuladores de eventos para o botão de adicionar tarefa e a entrada de texto.<br>
+        O botão "Add Task" adiciona uma nova tarefa à lista quando clicado.<br>
+        Cada tarefa pode ser removida usando um botão "Delete" gerado dinamicamente.<br>
+        Ao clicar em uma tarefa, ela é marcada ou desmarcada como concluída (estilo riscado).<br>
+        Como Executar o Projeto<br>
+        Crie uma pasta no seu computador chamada todo-list.<br>
+        Crie os arquivos index.html, styles.css, e script.js na pasta.<br>
+        Copie e cole o código acima nos respectivos arquivos.<br>
+        Abra o arquivo index.html no seu navegador preferido.<br>
+        Agora você tem um aplicativo de To-Do List funcional construído com JavaScript puro!<br>
+        <br>
+        Conclusão<br>
+        Este exemplo de projeto demonstra como construir um aplicativo interativo básico usando JavaScript, HTML e CSS. É uma excelente base para aprender sobre manipulação do DOM, gerenciamento de eventos, e desenvolvimento web front-end em geral. <br>A partir deste ponto, você pode expandir o projeto adicionando recursos como armazenamento local, filtros de tarefas ou uma interface mais avançada!</p>
+      </article>
+
+      <article class="blog-post" id="reactnative">
+        <h3>Programação Mobile com React Native</h3>
+        <p>React Native é um framework de código aberto desenvolvido pelo Facebook que permite criar aplicativos móveis usando JavaScript e React. Ele possibilita o desenvolvimento de aplicativos para iOS, Android e outras plataformas utilizando uma base de código única. Ao invés de utilizar componentes nativos escritos em Java, Kotlin, Swift, ou Objective-C, o React Native permite que desenvolvedores usem JavaScript para criar componentes que são então traduzidos para os componentes nativos da plataforma.</p>
+        <a href="#" class="read-more" data-title="Introdução ao JavaScript" 
+        data-content="React Native segue a filosofia: 
+        Aprenda uma vez, escreva em qualquer lugar. A ideia central é que você possa usar o mesmo conhecimento de desenvolvimento web (JavaScript e React) para desenvolver aplicativos móveis. Além disso, o React Native permite escrever componentes de forma declarativa, o que simplifica a criação de interfaces de usuário complexas com menos código.
+        
+        2. Principais Conceitos
+        Componentes: Componentes são blocos de construção fundamentais em React Native. Eles podem ser pensados como elementos de interface de usuário que encapsulam comportamento e aparência. Existem dois tipos principais de componentes:
+        
+        Componentes de Classe: Utilizam classes ES6 para definir componentes e geralmente são usados quando você precisa de gerenciamento de estado local ou de ciclos de vida do React.
+        Componentes Funcionais: São funções JavaScript que recebem props como argumentos e retornam elementos React. Com o React 16.8 e a introdução dos React Hooks, componentes funcionais podem agora gerenciar estado e efeitos colaterais, tornando-os muito mais poderosos.
+        JSX (JavaScript XML): JSX é uma extensão de sintaxe para JavaScript que permite escrever o que parece ser HTML dentro de JavaScript. JSX facilita a criação de componentes React porque é intuitivo e semelhante à escrita de HTML.
+        
+        Props (Propriedades): Props são usadas para passar dados e métodos de um componente para outro. Elas são imutáveis, o que significa que um componente pai pode passar props para um componente filho, mas o componente filho não pode modificar essas props.
+        
+        State (Estado): O estado é um objeto que armazena dados dinâmicos específicos para um componente e pode mudar ao longo do tempo. Sempre que o estado de um componente muda, o React Native renderiza novamente o componente para refletir essas mudanças.
+        
+        Hooks: Introduzidos no React 16.8, hooks são funções que permitem que você ligue o estado e outras funcionalidades do React em componentes funcionais. Os hooks mais comuns são useState, useEffect, useContext, useRef, entre outros.
+        
+        3. Ciclo de Vida dos Componentes
+        O ciclo de vida de um componente React Native refere-se à sequência de eventos que ocorrem desde a montagem até a desmontagem de um componente. Os métodos principais do ciclo de vida incluem:
+        
+        componentDidMount: Executado após o componente ser montado. É um bom lugar para iniciar chamadas a APIs ou configurar assinaturas.
+        componentDidUpdate: Executado após a atualização do componente. Útil para reagir a mudanças nas props ou no estado.
+        componentWillUnmount: Executado antes do componente ser desmontado e destruído. É usado para limpar recursos, como temporizadores ou assinaturas de eventos.
+        4. Navegação
+        React Native não possui uma solução de navegação embutida, mas há várias bibliotecas populares para navegação, sendo a mais utilizada o React Navigation. Essa biblioteca oferece uma navegação baseada em pilhas (Stack Navigation), guias (Tab Navigation), gavetas (Drawer Navigation), e também navegadores aninhados, permitindo criar fluxos de navegação complexos em aplicativos.
+        
+        5. Estilização
+        React Native usa um sistema de estilos baseado em CSS, mas os estilos são escritos em JavaScript usando o objeto StyleSheet. Ele suporta a maioria das propriedades de estilo do CSS tradicional, mas com alguns nomes modificados para usar camelCase (por exemplo, background-color se torna backgroundColor).
+        
+        6. Acesso a Funcionalidades Nativas
+        Para acessar funcionalidades nativas (como câmera, GPS, armazenamento local), React Native utiliza módulos nativos. Algumas APIs estão disponíveis diretamente no React Native (como CameraRoll), enquanto outras requerem bibliotecas de terceiros como react-native-camera ou react-native-maps.
+        
+        Além disso, é possível criar módulos nativos personalizados para interagir diretamente com o código nativo (Java/Kotlin para Android e Swift/Objective-C para iOS), permitindo maior flexibilidade e controle sobre as funcionalidades nativas.
+        
+        7. Debugging e Ferramentas de Desenvolvimento
+        React Native oferece diversas ferramentas de depuração, incluindo:
+        
+        React Developer Tools: Ferramenta de navegador para inspecionar a árvore de componentes, verificar o estado e as props.
+        Console do JavaScript: Usado para logging simples no console do navegador ou terminal.
+        React Native Debugger: Ferramenta standalone que combina as ferramentas do React Developer Tools com o Redux DevTools.
+        Flipper: Ferramenta oficial de debugging do Facebook para aplicativos móveis, que fornece uma interface para monitorar logs, inspecionar a árvore de componentes e gerenciar plugins para diversas funcionalidades.
+        8. Performance
+        React Native é conhecido por sua boa performance na maioria dos casos, mas há considerações importantes a serem feitas:
+        
+        Bridging e Threads: React Native usa um bridge para comunicar entre a thread JavaScript e as threads nativas (UI e background). Essa comunicação pode ser um gargalo se muitos dados estiverem sendo transmitidos através da ponte.
+        Animações: Para animações suaves, React Native recomenda o uso da API de Animação Interpolada ou bibliotecas como Reanimated para melhor performance.
+        Listas: Para renderizar listas de itens, componentes como FlatList e SectionList são otimizados para eficiência e performance, especialmente com grandes quantidades de dados.
+        9. Ecosistema e Comunidade
+        React Native tem uma comunidade grande e ativa que contribui com bibliotecas, ferramentas, e suporte. Há também uma vasta gama de pacotes disponíveis através do npm para adicionar funcionalidades ao aplicativo, desde elementos de UI até ferramentas de teste e animação.
+        
+        10. Publicação e Distribuição
+        A publicação de aplicativos React Native é semelhante ao processo para aplicativos nativos:
+        
+        Android: O aplicativo precisa ser compilado como um APK ou AAB através do Android Studio e, em seguida, enviado para a Google Play Store.
+        iOS: O aplicativo é empacotado como um .ipa através do Xcode e enviado para a App Store da Apple.
+        11. Vantagens e Desvantagens
+        Vantagens:
+        
+        Código compartilhado: A mesma base de código pode ser usada para desenvolver aplicativos para iOS e Android.
+        Desenvolvimento rápido: O hot-reloading e fast-refresh permitem mudanças rápidas no código sem reiniciar o aplicativo.
+        Forte suporte da comunidade: React Native possui uma comunidade vibrante e suporte extensivo de bibliotecas e ferramentas.
+        Desvantagens:
+        
+        Dependência de código nativo: Para funcionalidades específicas, pode ser necessário escrever ou integrar código nativo.
+        Performance: Embora React Native ofereça boa performance, aplicações muito complexas ou intensivas em gráficos podem não ter a mesma performance que aplicações nativas puras.
+        Limitações em funcionalidades nativas: Alguns recursos nativos de plataforma podem não ter suporte direto e exigir implementação personalizada.
+        12. Tendências Atuais e Futuras
+        React Native continua a evoluir rapidamente, com melhorias contínuas em performance, suporte a novas APIs de plataformas móveis, e simplificação da integração com código nativo. Ferramentas como Hermes (um motor de JavaScript otimizado para dispositivos móveis) e novos paradigmas de navegação e animação estão moldando o futuro do desenvolvimento de aplicativos com React Native.
+        
+        13. Conclusão
+        React Native é uma excelente escolha para desenvolvedores que desejam criar aplicativos móveis multiplataforma com uma base de código única e uma curva de aprendizado relativamente baixa. Sua forte integração com o ecossistema React, suporte ativo da comunidade e capacidade de integrar com código nativo tornam-no uma solução poderosa para muitas necessidades de desenvolvimento de aplicativos móveis.">Leia mais</a>
+  <p><br>Pré-requisitos<br>
+    Node.js: Certifique-se de que o Node.js esteja instalado. Você pode verificar se está instalado executando node -v no terminal.<br>
+    <br>
+    React Native CLI: Instale o React Native CLI globalmente se ainda não o tiver:<br>
+    <br>
+    
+    npm install -g react-native-cli<br>
+    Ambiente de Desenvolvimento: Instale o ambiente necessário para React Native para Android e iOS. Para iOS, você precisará de um Mac com Xcode instalado.<br>
+    <br>
+    2. Criando o Projeto<br>
+    No terminal, crie um novo projeto React Native:<br>
+    <br>
+    npx react-native init TodoApp<br>
+    Isso criará uma nova pasta chamada TodoApp com a estrutura básica do projeto React Native.</p>
+  <div class="image-gallery">
+  <figure>
+  <img src="img/1native.png" alt="Imagem 1">
+  <figcaption>descrição da imagem 1:<br>Estrutura do Projeto: <br>
+    Dentro do diretório do projeto, a estrutura será semelhante a imagem acima:</figcaption>
+  </figure>
+  <figure>
+  <img src="img/2native.png" alt="Imagem 2">
+  <figcaption>Descrição da imagem 2:<br>Implementação do Projeto
+     Criando o Componente TodoItem<br>
+    Crie um componente chamado TodoItem.js dentro da pasta src/components para representar cada item da lista de tarefas.
+    <br>
+    src/components/TodoItem.js</figcaption>
+  </figure>
+  <figure>
+  <img src="img/3native.png" alt="Imagem 3">
+  <figcaption>Descrição da imagem 3:<br>   Atualizando o Componente Principal App<br>
+    Edite o arquivo App.js para adicionar a lógica da lista de tarefas e o gerenciamento de estado.
+    <br>
+    App.js.</figcaption>
+  </figure>
+  <p>Executando o Projeto<br>
+    Para rodar o aplicativo no Android, use:<br>
+    <br>
+    npx react-native run-android<br>
+    Para rodar o aplicativo no iOS, use:<br>
+    <br>
+    npx react-native run-ios<br>
+    Explicação do Código<br>
+    Gerenciamento de Estado: Utilizamos o hook useState para gerenciar o estado da tarefa atual (task) e da lista de tarefas (tasks).<br>
+    <br>
+    Funções de Manipulação:<br>
+    <br>
+    addTask: Adiciona uma nova tarefa à lista de tarefas.<br>
+    deleteTask: Remove uma tarefa da lista de tarefas com base no id.<br>
+    Componentização: O componente TodoItem é usado para representar cada tarefa na lista. Ele recebe as props item (a tarefa) e onDelete (função para excluir a tarefa).
+    <br>
+    Renderização de Lista: Utilizamos o componente FlatList para renderizar eficientemente uma lista de tarefas, especialmente para listas de tamanho dinâmico.<br>
+    
+   Conclusão<br>
+    Este exemplo básico mostra como criar uma aplicação simples de lista de tarefas com React Native, abordando conceitos fundamentais como estado, props, componentes, e manipulação de listas. A partir daqui, você pode expandir o projeto adicionando funcionalidades como edição de tarefas, categorização de tarefas, e integração com armazenamento local ou remoto para persistência de dados.</p>
+  </div>
+  </article>
+        </div>
+    </section>
+      
+  </div>
+</section>
+
+       <!-- Modal para mostrar conteúdo completo do post -->
+<div id="blogModal" class="modal">
+  <div class="blog-modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalTitle">Título do Post</h3>
+    <p id="modalBody">Conteúdo completo do post vai aqui...</p>
+  </div>
+</div>
+
+    <footer>
+      <p>&copy; 2024 Geisila Costa. Todos os direitos reservados.</p>
+              <a href="https://github.com/GeisilaCosta" target="_blank">
+                  <img src="img/github_PNG40.png" alt="Github">
+              </a>
+      
+              <a href="www.linkedin.com/in/geisila-silva-da-costa-0089a3177" target="_blank">
+                  <img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png" alt="Linkedin">
+              </a>
+
+              <a href="https://www.instagram.com/geisilasilvadacosta" target="_blank">
+                  <img src="img/insta.png" alt="instagram">
+              </a>
+          
+              <a href="https://www.facebook.com/geisila.silvadacosta" target="_blank">
+                  <img src="img/face_p-removebg-preview.png" alt="facebook">
+              </a>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
