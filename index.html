@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geisila Costa</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Geisila Costa</h1>
+        <h2>Transformando ideias em soluções digitais</h2>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#certificado">Certificados</a></li>
+                <li><a href="blog.html" target="_blank">Blog</a></li>
+                <li><a href="https://github.com/GeisilaCosta" target="_blank">Github</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+
+        <div id="viewCount"></div>
+
+        <section id="sobre" class="flex-container">
+            <div class="sobre-text">
+                <h2>Sobre Mim</h2>
+                <a href="downloads/GeisilaSCosta.pdf" download="GeisilaSCosta.pdf" class="download-button">
+                  <button>Baixar Currículo em PDF</button>
+                </a>
+                <p>Olá! Meu nome é Geisila e sou apaixonada por tecnologia.</p>
+                <p>
+                   Sempre buscando conhecimento e novidades para criar soluções inovadoras e eficientes. 
+                  Com conhecimento em React, React Native, JavaScript, TypeScript, Java, HTML, CSS, PostgreSQL, Git... <br>tenho trabalhado em diversos projetos que envolvem 
+                  desenvolvimento full stack, web e mobile. Meu objetivo é sempre buscar o equilíbrio entre estética e funcionalidade, 
+                  oferecendo ótimas soluções e experiências ao usuário.
+                </p>
+                <p>
+                  No meu portfólio, você encontrará uma variedade de projetos que demonstram minhas habilidades e 
+                  conhecimentos. Estou sempre aberto a novos desafios e oportunidades para crescer profissionalmente e 
+                  colaborar com outras pessoas.
+                </p>
+                <p>
+                  Se você está interessado em trabalhar comigo ou apenas quer saber mais sobre meu trabalho, sinta-se à vontade 
+                  para entrar em contato.
+                </p>
+            </div>
+            <div class="sobre-img">
+                <img class="sobre-imagem"src="img/geisila.png.jpg" alt="Foto Geisila Costa" style="width: 150px; height: 200px; border-radius: 50%; object-fit: cover; margin: 10px;" >
+            </div>
+        </section>
+        
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Alguns dos meus serviços</p>
+            <ul>
+                <li>Desenvolvimento Full Stack
+                    <ul>
+                      <li>Aplicativos Web</li>
+                      <li>Mobile</li>
+                      <li>Sistemas</li>
+                      <li>APIs</li>
+                      <li>Banco de dados</li>
+                    </ul>
+                </li>
+                <li>Analista de Desenvolvimento de Sistemas </li>
+                <ul>
+                  <li>Analisar, projetar, desenvolver e implementar sistemas de informação</li>
+                  <li>Coletar e analisar os requisitos dos usuários e das partes interessadas para entender as necessidades do sistema</li>
+                  <li>Projetar soluções de software eficazes e eficientes com base nos requisitos</li>
+                  <li>Escrever os códigos, seguindo as melhores práticas de programação</li>
+                </ul>
+                <li>Desenvolvimento Front End</li>
+                <ul>
+                  <li>Conceitos de HTML, CSS e JavaScript</li>
+                  <li>Otimização de Websites e Interfaces</li>
+                  <li>Utilização de Frameworks e bibliotecas</li>
+                  <li>Design Responsivo</li>
+                  <li>FrameWorks: Bootstrap, ReactJs... </li>
+                </ul>
+                <li>Desenvolvimento Back End</li>
+                <ul>
+                  <li>Conceitos Java</li>
+                  <li>Programação Orientada a Objetos</li>
+                  </ul>
+                  <li>Power BI</li>
+                  <ul>
+                    <li>Conceitos de Power BI</li>
+                    <li>Análise de dados com BI</li>
+
+                  </ul>
+            </ul>
+            <div class="chart-container" style="width: 90%; margin: auto;">
+              <canvas id="myStackChart"></canvas>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos Recentes</h2>
+            <div class="carousel-wrapper">
+              <div class="carousel">
+                <div class="carousel-slide">
+                  <video controls>
+                    <source src="videos/info.mp4" type="video/mp4">
+                    Seu navegador não suporta o formato de vídeo.
+                  </video>
+                  <h2>Influencers4You</h2>
+                  <a href="https://github.com/GeisilaCosta/influencer4you" target="_blank">
+                    <button>Repositório</button>
+                </a>
+                  <p>
+                    Influence4You é uma plataforma de marketing de influenciadores que conecta empresas e influenciadores para colaborações em campanhas. <br>Com o Influence4You, as empresas podem encontrar influenciadores relevantes para promover seus produtos e serviços, enquanto os influenciadores podem descobrir oportunidades de parceria.<br>
+                    Tecnologias Utilizadas<br>
+                    Java: Usamos Java para o backend e a lógica de negócios.<br>
+                    TypeScript: O frontend é construído com TypeScript e React.<br>
+                    CSS: Estilizamos a interface com CSS e componentes reutilizáveis.<br>
+                    Funcionalidades Principais<br>
+                    Pesquisa de Influenciadores:<br>
+                    Os usuários podem pesquisar influenciadores com base em nichos, seguidores, localização e outras métricas.<br>
+                    Os influenciadores têm perfis detalhados com informações sobre suas áreas de interesse, público-alvo e taxas de colaboração.<br>
+                    Gestão de Projetos:<br>
+                    As empresas podem criar projetos e convidar influenciadores para colaborar.<br>
+                    Os influenciadores podem aceitar ou recusar convites e acompanhar o progresso dos projetos.<br>
+                    Monitoramento de Campanhas:<br>
+                    As empresas podem rastrear o desempenho das campanhas, incluindo métricas como alcance, engajamento e conversões.<br>
+                    Os influenciadores podem ver o desempenho de suas postagens e receber feedback das empresas.</p>
+                    </div>
+
+            <div class="carousel-slide">
+              <video controls>
+                <source src="videos/phito.mp4" type="video/mp4">
+                Seu navegador não suporta o formato de vídeo.
+              </video>
+              
+              <h2>PhitoTec</h2>
+              <a href="https://github.com/GeisilaCosta/PhytoTec" target="_blank">
+                <button>Repositorio</button>
+            </a>
+              <p>PhytoTec é uma aplicação full-stack para uma farmácia de plantas medicinais. O objetivo é fornecer uma interface intuitiva para listar e cadastrar plantas medicinais com todas as suas informações relevantes.
+
+                ## Tecnologias Utilizadas
+                
+                ### Frontend:
+                - React
+                - Vite
+                - TypeScript
+                - Axios
+                - React Router
+                - Bootstrap
+                - React-Bootstrap
+                
+                ### Backend:
+                - Java
+                - Spring Boot
+                - Spring Data JPA
+                - H2 Database (dev)
+                - PostgreSQL (prod)
+                </p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <video controls>
+                <source src="videos/cardapios.mp4" type="video/mp4">
+                Seu navegador não suporta o formato de vídeo.
+              </video>
+              <h2>Cardápio</h2>
+              <a href="https://github.com/GeisilaCosta/cardapio" target="_blank">
+                <button>Repositorio</button>
+            </a>
+              <p>Este projeto é um aplicativo web que permite a visualização e cadastro de itens em um cardápio. Ele foi desenvolvido utilizando React no frontend e Spring Boot no backend.
+
+                Funcionalidades
+                Visualização de itens do cardápio.
+                Cadastro de novos itens no cardápio.
+                Interface intuitiva e responsiva.
+                Tecnologias Utilizadas
+                Frontend
+                React
+                TypeScript
+                Vite
+                React Query
+                CSS Modules
+                Backend
+                Spring Boot
+                Spring Data JPA
+                H2 Database
+                PostgreSQL</p>
+            </div>
+              
+            <div class="carousel-slide">
+              <video controls>
+                  <source src="videos/green.mp4" type="video/mp4">
+                  Seu navegador não suporta o formato de vídeo.
+              </video>
+              <h2>GreenShoes</h2>
+              <a href="https://github.com/GeisilaCosta/greenShoes" target="_blank">
+                  <button>Geen Shoes</button>
+              </a>
+              <p>Green Shoes<br>
+                Bem-vindo ao repositório do projeto Green Shoes! Este é um e-commerce fictício de calçados elegantes e sustentáveis.<br>
+                
+                Visão Geral<br>
+                O Green Shoes é um projeto desenvolvido com HTML, CSS e JavaScript. Ele inclui as seguintes funcionalidades:<br>
+                
+                Catálogo de Produtos: Exiba os calçados disponíveis, organizados por categorias (feminino, masculino, acessórios).<br>
+                Detalhes do Produto: Cada produto tem uma página de detalhes com informações como preço, descrição e imagens.<br>
+                Carrinho de Compras: Os usuários podem adicionar produtos ao carrinho e finalizar a compra.</p>
+          </div>
+      </div>
+      <div class="carousel-slide">
+        <video controls>
+            <source src="videos/serraTec.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+        <h2>Serra Tec</h2>
+        <a href="https://github.com/GeisilaCosta/PhytoTec" target="_blank">
+            <button>Repositorio</button>
+        </a>
+        <p>  Bem-vindo ao repositório do projeto Serra Tec! Este é um e-commerce fictício de produtos eletronicos.<br>
+                
+          Visão Geral<br>
+          O Serra Tec é um projeto desenvolvido com React Vite, CSS e routes... Ele inclui as seguintes funcionalidades:<br>
+          
+          Catálogo de Produtos.<br>
+          Carrinho de Compras: Os usuários podem adicionar produtos ao carrinho e finalizar a compra.</p></p>
+    </div>
+
+            </div>
+
+
+            <div class="carousel-nav">
+                <button id="prev-slide">&#10094;</button>
+                <button id="next-slide">&#10095;</button>
+              </div>
+            <div class="carousel-indicators"></div>
+        </div>
+                   
+                    
+        </section>
+
+        
+ <section id="certificado">
+  <h2>Certificados</h2>
+  <p>Click nas fotos para uma melhor vizualização</p>
+  <div class="certificates-carousel">
+    <div class="carousel-inner">
+      <!-- Certificate 1 -->
+      <div class="carousel-item active">
+        <div class="certificate">
+          <img src="img/diploma_estacio_frente.png" alt="Certificado 1 - Frente">
+          <img src="img/diploma_estacio_costas.png" alt="Certificado 1 - Costas">
+          <h3>Universidade Estácio de Sá</h3>
+          <p>Análise e Desenvolvimento de Sistemas</p>
+        </div>
+      </div>
+      <!-- Certificate 2 -->
+      <div class="carousel-item">
+        <div class="certificate">
+          <img src="img/diploma_algoritimos_frente.png" alt="Certificado 2 - Frente">
+          <img src="img/diploma_algoritimos_costas.png" alt="Certificado 2 - Costas">
+          <h3>Universidade Estácio de Sá</h3>
+          <p>Programação de Algoritmos Escaláveis</p>
+        </div>
+      </div>
+      <!-- Certificate 3 -->
+      <div class="carousel-item">
+        <div class="certificate">
+          <img src="img/diploma_serratec_frente.png" alt="Certificado 3 - Frente">
+          <img src="img/diploma_serratec_costas.png" alt="Certificado 3 - Costas">
+          <h3>Serratec</h3>
+          <p>Residência TIC e Software</p>
+        </div>
+      </div>
+      <!-- Certificate 4 -->
+      <div class="carousel-item">
+        <div class="certificate">
+          <img src="img/Frente_dispositivos_moveis.png" alt="Certificado 4 - Frente">
+          <img src="img/Costas_dispositivos_moveis.png" alt="Certificado 4 - Costas">
+          <h3>Universidade Estácio de Sá</h3>
+          <p>Programação para Dispositivos Móveis</p>
+        </div>
+      </div>
+      <!-- Certificate 5 -->
+      <div class="carousel-item">
+        <div class="certificate">
+          <img src="img/frent_Prog_internet.png" alt="Certificado 5 - Frente">
+          <img src="img/cost_porg_internet.png" alt="Certificado 5 - Costas">
+          <h3>Universidade Estácio de Sá</h3>
+          <p>Programação para Internet</p>
+        </div>
+      </div>
+      <!-- Certificate 6 -->
+      <div class="carousel-item">
+        <div class="certificate">
+          <img src="img/dipl_BI.png" alt="Certificado 6">
+          <h3>Santander Academy</h3>
+          <p>Power BI</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button id="prev-slide" class="carousel-control prev">&#10094;</button>
+      <button id="next-slide" class="carousel-control next">&#10095;</button>
+    </div>
+  </div>
+
+  <div id="image-modal" class="modal">
+    <span id="modal-close" class="modal-close">&times;</span>
+    <img id="modal-image" class="modal-content">
+  </div>
+</section>
+
+        
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>envie sua mensagem , sugestão ou dúvidas! </p>
+            <form id="contactForm" action="/submit" method="POST">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" role="5" required></textarea>
+
+                <button type="submit" value="Enviar">Enviar</button>
+            </form>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Geisila Costa. Todos os direitos reservados.</p>
+                <a href="https://github.com/GeisilaCosta" target="_blank">
+                    <img src="img/github_PNG40.png" alt="Github">
+                </a>
+        
+                <a href="www.linkedin.com/in/geisila-silva-da-costa-0089a3177" target="_blank">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png" alt="Linkedin">
+                </a>
+
+                <a href="https://www.instagram.com/geisilasilvadacosta" target="_blank">
+                    <img src="img/insta.png" alt="instagram">
+                </a>
+            
+                <a href="https://www.facebook.com/geisila.silvadacosta" target="_blank">
+                    <img src="img/face_p-removebg-preview.png" alt="facebook">
+                </a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
