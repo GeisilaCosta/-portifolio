@@ -1,25 +1,52 @@
-// Espera o DOM estar totalmente carregado
 document.addEventListener('DOMContentLoaded', function() {
+  // // Formulário de contato
+  // const contactForm = document.getElementById('contactForm');
+  // if (contactForm) {
+  //   contactForm.addEventListener('submit', function(event) {
+  //     event.preventDefault();
+  //     const formData = {
+  //       nome: document.getElementById('nome').value,
+  //       email: document.getElementById('email').value,
+  //       mensagem: document.getElementById('mensagem').value
+  //     };
+  //     fetch('http://localhost:5000/submit', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     })
+  //     .then(response => response.text())
+  //     .then(data => alert(data))
+  //     .catch(error => {
+  //       console.error('Erro:', error);
+  //       alert('Erro ao enviar a mensagem.');
+  //     });
+  //   });
+  // }
 
-  // ** Formulário de Contato
-  //
-  // ** Contagem de Visualizações **
-  //
-  // ** Carrossel **
+  // // Contagem de visualizações
+  // fetch('http://localhost:5000/views')
+  // .then(response => response.json())
+  // .then(data => {
+  //   console.log(`O site foi visualizado ${data.views} vezes.`);
+  //   const viewCount = document.getElementById('viewCount');
+  //   if (viewCount) viewCount.innerText = `Visualizações: ${data.views}`;
+  // })
+  // .catch(error => console.error('Erro ao obter contagem de visualizações:', error));
+
+  // Carrossel
   const carousel = document.querySelector('.carousel');
-  const carouselSlides = document.querySelectorAll('.carousel-slide');
-  const carouselNav = document.querySelector('.carousel-nav');
-  const carouselIndicators = document.querySelector('.carousel-indicators');
-  const prevSlideButton = document.querySelector('#prev-slide');
-  const nextSlideButton = document.querySelector('#next-slide');
-
-  if (carousel && carouselSlides.length) {
+  if (carousel) {
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+    const carouselIndicators = document.querySelector('.carousel-indicators');
+    const prevSlideButton = document.querySelector('#prev-slide');
+    const nextSlideButton = document.querySelector('#next-slide');
     let currentSlide = 0;
 
-    // Adiciona indicadores de slide
     if (carouselIndicators) {
       carouselIndicators.innerHTML = '';
-      carouselSlides.forEach((_, index) => {
+      carouselSlides.forEach((slide, index) => {
         const indicator = document.createElement('button');
         indicator.textContent = `${index + 1}`;
         carouselIndicators.appendChild(indicator);
@@ -68,61 +95,40 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel();
   }
 
-  // ** Carrossel de Certificados **
-  document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.certificates-carousel');
-    const carouselInner = carousel.querySelector('.carousel-inner');
-    const carouselItems = carouselInner.querySelectorAll('.carousel-item');
-    const prevSlideButton = document.getElementById('prev-slide');
-    const nextSlideButton = document.getElementById('next-slide');
-  
-    // Adiciona evento de clique nos botões de navegação
-    prevSlideButton.addEventListener('click', () => {
-      // ...
+
+//certificados 
+
+  const certificadosCarouselInner = document.querySelector('.certificates-carousel .carousel-inner');
+  const certificadosCarouselItems = document.querySelectorAll('.certificates-carousel .carousel-item');
+  const certificadosPrevSlide = document.querySelector('.carousel-nav .carousel-control.prev');
+  const certificadosNextSlide = document.querySelector('.carousel-nav .carousel-control.next');
+
+  let certificadosCurrentIndex = 0;
+
+  function updateCertificadosCarousel() {
+    certificadosCarouselItems.forEach((item, index) => {
+      if (index === certificadosCurrentIndex) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
     });
-  
-    nextSlideButton.addEventListener('click', () => {
-      // ...
-    });
-  
-    // Inicializa o carrossel
-    updateCarousel();
+  }
+
+  certificadosPrevSlide.addEventListener('click', () => {
+    certificadosCurrentIndex = (certificadosCurrentIndex > 0) ? certificadosCurrentIndex - 1 : certificadosCarouselItems.length - 1;
+    updateCertificadosCarousel();
   });
-  
-  function updateCarousel() {
-    // ...
-  }
-  
-  // ...
 
-  if (carouselInner && carouselItems.length) {
-    let currentIndex = 0;
+  certificadosNextSlide.addEventListener('click', () => {
+    certificadosCurrentIndex = (certificadosCurrentIndex < certificadosCarouselItems.length - 1) ? certificadosCurrentIndex + 1 : 0;
+    updateCertificadosCarousel();
+  });
 
-    function updateCarousel() {
-      carouselItems.forEach((item, index) => {
-        item.classList.toggle('active', index === currentIndex);
-      });
-    }
+  updateCertificadosCarousel();
+});
 
-    if (prevSlide) {
-      prevSlide.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
-        updateCarousel();
-      });
-    }
-
-    if (nextSlide) {
-      nextSlide.addEventListener('click', () => {
-        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-      });
-    }
-
-    // Inicializa o carrossel de certificados
-    updateCarousel();
-  }
-
-  // ** Modal para Imagem **
+  // Modal para visualização da imagem
   const modal = document.getElementById('image-modal');
   const modalImg = document.getElementById('modal-image');
   const closeModal = document.getElementById('modal-close');
@@ -147,66 +153,67 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ** Gráfico **
-  const stackData = {
-    labels: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'React Native','Node.js', 'next.js', 'Java', 'SQL', 'Git'],
-    datasets: [{
-      label: 'Pontuação de Competência',
-      data: [8, 7, 7, 8, 8, 7, 8, 7, 6, 7, 6, 8],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(0, 255, 127, 0.2)',
-        'rgba(255, 99, 71, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-        'rgba(0, 255, 127, 1)',
-        'rgba(255, 99, 71, 1)'
-      ],
-      borderWidth: 1
-    }]
-  };
+  // Gráfico
+  const ctx = document.getElementById('myStackChart');
+  if (ctx) {
+    const stackData = {
+      labels: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'React Native', 'Node.js', 'next.js', 'Java', 'SQL', 'Git'],
+      datasets: [{
+        label: 'Pontuação de Competência',
+        data: [8, 7, 7, 8, 8, 7, 8, 7, 6, 7, 6, 8],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(0, 255, 127, 0.2)',
+          'rgba(255, 99, 71, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(0, 255, 127, 1)',
+          'rgba(255, 99, 71, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
 
-  const config = {
-    type: 'bar',
-    data: stackData,
-    options: {
-      responsive: true,
-      plugins: {
-        title: {
-          display: true,
-          text: 'Minhas Stacks e Pontuações'
+    const config = {
+      type: 'bar',
+      data: stackData,
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Minhas Stacks e Pontuações'
+          },
+          legend: {
+            display: true,
+            position: 'top'
+          }
         },
-        legend: {
-          display: true,
-          position: 'top'
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 10
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 10
+          }
         }
       }
-    }
-  };
+    };
 
-  const myChartElement = document.getElementById('myStackChart');
-  if (myChartElement) {
-    new Chart(myChartElement, config);
+    new Chart(ctx, config);
   }
 
-// ** Blog - Modal de Post **
+  // Blog
+ // ** Blog - Modal de Post **
 const blogPosts = document.querySelectorAll('.blog-post');
 const modals = document.getElementById('blogModal');
 const modalTitle = document.getElementById('modalTitle');
@@ -279,19 +286,20 @@ images.forEach((image) => {
     showNextImage();
   });
 });
-/*acesso do vercel para o servidor express.js*/
-const app = express();
-const port = process.env.PORT || 5000;
 
-// Adiciona o middleware para permitir CORS
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
+// /*acesso do vercel para o servidor express.js*/
+// const app = express();
+// const port = process.env.PORT || 5000;
 
-// Inicia o servidor
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
-});
-});
+// // Adiciona o middleware para permitir CORS
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//   next();
+// });
+
+//fiz o deploy em um servidor (vercel) de site estatico, nao usarei o backend
+// // Inicia o servidor
+// app.listen(port, () => {
+//   console.log(Servidor rodando na porta ${port});
+// });
