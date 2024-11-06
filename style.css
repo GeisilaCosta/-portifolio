@@ -8,10 +8,12 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.8;
+  flex: 1;
   background-color: #000000;
   color: #868686; 
   position: relative; 
 }
+
 
 /* Container principal */
 main {
@@ -447,7 +449,8 @@ button:focus {
 }
 
 /* Footer */
-footer {
+footer {margin-bottom: 0;
+
   background-color: #252525fd;
   color: #585858;
   text-align: center;
